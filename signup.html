@@ -29,11 +29,11 @@
                     </h1>
                 </div>
                 <div class="index">
-                    <a href="#"><span class="material-symbols-outlined">arrow_back</span>VOLTAR PARA O LOGIN</a>
+                    <a href="login.html"><span class="material-symbols-outlined">arrow_back</span>VOLTAR PARA O LOGIN</a>
                 </div>
             </div>
             <div class="form">
-                <form action="javascript:alert('formulário aprovado para envio')" method="post">
+                <form id="form-api" action="javascript:alert('formulário aprovado para envio')" method="post">
                     <div class="form-header">
                         <div class="signup-button">
                             <button><a href="#">Candidato</a></button>
@@ -53,21 +53,41 @@
                             <input id="email" type="email" name="email" placeholder="E-mail" required>
                         </div>
                         <div class="input-box">
-                            <input id="password" type="password" name="password" placeholder="Senha" pattern="(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.[A-Z])(?=.*[a-z))^.{8,}$" required>
+                            <input id="password" type="password" name="password" placeholder="Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':?])[a-zA-Z\d!@#$%^&*()_+\-=[\]{};':?]{8,50}$" oninvalid="setCustomValidity('A senha deve conter pelo menos uma letra maiúscula, uma letra minúscula, um número e um caracter especial e ter no mínimo 8 caracteres')" required>
                         </div>
                         <div class="input-box">
-                            <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Confirmar Senha" required>
+                            <input id="confirmpassword" type="password" name="confirmpassword" placeholder="Confirmar Senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':?])[a-zA-Z\d!@#$%^&*()_+\-=[\]{};':?]{8,50}$" required>
                         </div>
                     </div>
                     <div class="continue-button">
                         <div class="signup">
-                            <button type="submit"><a href="#">CADASTRAR</a></button>
+                            <button type="submit"><a>CADASTRAR</a></button>
                         </div>
                         <div class="signup-google">
                             <button><a href="#"><img src="assets/img/button-google.svg" alt="cadastro com o google">Entrar com Google</a></button>
                         </div>
                     </div>
                 </form>
+
+                <script>
+                    const formEl = document.getElementById('form-api')
+
+                    formEl.addEventListener('submit', evento=> {
+                        evento.preventDefault();
+
+                        const formData = new FormData(formEl);
+                        const data = Object.fromEntries(formData);
+
+                        fetch('https://localhost:7047/v1/user', {                        
+                            method: 'POST',
+                            headers: {
+                                'Content-Type' : 'application/json'
+                            },
+                            body: JSON.stringify(data)
+                        }).then(res => res.json()).then(data => console.log(data))
+                    })
+                </script>
+
             </div>
         </div>
     </div>
