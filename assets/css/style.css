@@ -26,7 +26,8 @@ header {
     background-color: #251F4A;
     box-shadow: 0px 3px 10px #000000;
     width: 100vw;
-    position: -webkit-sticky; /* Necessário para funcionar no Safari */
+    position: -webkit-sticky;
+    /* Necessário para funcionar no Safari */
     position: sticky;
     top: 0;
     z-index: 10;
@@ -71,7 +72,7 @@ header {
     font-weight: 400;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #7765F0;
     transition: .2s;
 }
@@ -86,7 +87,7 @@ header {
     cursor: pointer;
 }
 
-.start-button button a {
+.start-button a button {
     text-decoration: none;
     font-weight: 800;
     font-size: 1.15rem;
@@ -128,7 +129,7 @@ header {
     font-weight: 700;
 }
 
-.searchbar-keyword-input{
+.searchbar-keyword-input {
     position: absolute;
     top: 28px;
     left: 0.5rem;
@@ -187,7 +188,7 @@ header {
     cursor: pointer;
 }
 
-.button{
+.button {
     width: 1.2rem;
     height: 1.2rem;
     display: flex;
@@ -206,12 +207,12 @@ header {
     transition: .3s cubic-bezier(0.895, 0.07, 0.685, 0.68);
 }
 
-.home-office:checked ~ .searchbar-radio-button > .button{
+.home-office:checked~.searchbar-radio-button>.button {
     left: 2.85rem;
     box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-.home-office:checked ~ .searchbar-radio-button{
+.home-office:checked~.searchbar-radio-button {
     background: #40B038;
     box-shadow: inset 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.2);
 }
@@ -306,7 +307,7 @@ header {
     cursor: pointer;
 }
 
-.login-button button a {
+.login-button a button {
     text-decoration: none;
     font-weight: 800;
     font-size: 1.5rem;
@@ -330,7 +331,7 @@ header {
     background-color: #584AB0;
 }
 
-.singup-button button a {
+.singup-button a button {
     text-decoration: none;
     font-weight: 800;
     font-size: 1.5rem;
@@ -339,87 +340,107 @@ header {
     text-align: center;
 }
 
-
 /* ---Planos--- */
+
 .pricing {
     width: 100%;
-    height: 60%;
-    margin-top: 5rem;
+    height: 100%;
+    padding: 50px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    color: #EBEDF2;
     background: linear-gradient(130deg, #000000, #584AB0);
     background-size: 350%;
 }
 
-.pricing ul {
-    display: block;
-    width: 20rem;
-    height: 33rem;
-    margin: 1.5rem 2rem;
-    background-color: #251F4A;
-    border-radius: 0 0 30px 30px;
-}
-
-.pricing ul li{
+.pricing-list-close {
     display: flex;
+    text-decoration: none;
+    color: #EBEDF233;
+    align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
-}
-
-.pricing-title {
-    display: flex;
-    color: #EBEDF2;
-    font-weight: 800;
-    font-size: 2rem;
-    margin: 2rem 0;
 }
 
 .pricing-list-check {
     display: flex;
     text-decoration: none;
     color: #EBEDF2;
-    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .pricing-list-check span {
     color: #00FF47;
 }
 
-.pricing-list-close {
-    display: flex;
-    text-decoration: none;
-    color: #EBEDF233 ;
-    font-size: 1.5rem;
-}
-
-.pricing-list-close span {
-    color: #EBEDF233;
-}
-
-.pricing-button{
-    display: flex;
-    justify-content: center;
-    margin-top: 5rem;
-}
-
-.pricing-button button {
-    border: none;
-    width: 210px;
-    height: 81px;
-    background-color: #584AB0;
-    padding: 0.4rem 1rem;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.pricing-button button a {
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 1.5rem;
-    line-height: 37px;
-    color: #EBEDF2;
+.pricing .card {
+    width: 300px;
+    height: auto;
+    padding: 10px 0;
+    margin: 1.5rem 2rem;
     text-align: center;
+    background: #251F4A;
+    border-radius: 15px;
+    box-shadow: 2px 5px 15px black;
+    transition: transform 0.3s;
+}
+
+.pricing .card:hover {
+    transform: scale(1.050);
+}
+
+.pricing .card .card-title {
+    padding: 30px 20px;
+    border-bottom: 2px solid gray;
+}
+
+.pricing .card .card-title h2 {
+    font-size: 35px;
+    padding-bottom: 15px;
+    color: yellow;
+}
+
+.pricing .card .card-title p span {
+    font-size: 40px;
+    padding: 0 5px;
+}
+
+.pricing .card .card-content ul {
+    padding: 10px 30px;
+    padding-bottom: 20px;
+}
+
+.pricing .card .card-content ul li {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.pricing .card .card-content ul li i {
+    margin-right: 4px;
+}
+
+.pricing .card .card-content button {
+    width: 120px;
+    padding: 10px 20px;
+    background: #584AB0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pricing .card .card-content button:hover {
+    background: #584AB0;
+    letter-spacing: 1.2px;
+}
+
+.pricing .card .card-content a button {
+    text-decoration: none;
+    color: #EBEDF2;
+    font-size: 15px;
 }
 
 /* ---rodapé da pagina--- */
@@ -432,7 +453,7 @@ footer {
 
 .foot-bar {
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     align-items: flex-start;
 }
 
@@ -444,13 +465,13 @@ footer {
     color: #EBEDF2;
 }
 
-.foot-list{
+.foot-list {
     display: flex;
     align-items: flex-start;
     margin-top: 3em;
 }
 
-.foot-list ul { 
+.foot-list ul {
     display: block;
     justify-content: center;
     align-items: flex-start;
@@ -475,16 +496,19 @@ footer {
     font-weight: 400;
 }
 
+/* ---media query--- */
+
 @media (max-width: 1366px) {
-    .index-image{
+    .index-image {
         display: none;
     }
+
     .index-text {
         width: 90%;
     }
 }
 
-@media (max-width: 1150px) {   
+@media (max-width: 1150px) {
     .nav-bar {
         padding: 1.5rem 4rem;
     }
@@ -542,10 +566,6 @@ footer {
         flex-direction: column;
     }
 
-    .pricing ul {
-        width: 30rem;
-    }
-
     .searchbar {
         flex-direction: column;
     }
@@ -566,15 +586,18 @@ footer {
     footer {
         height: 25rem;
     }
+
     .foot-bar {
         flex-direction: column;
         align-items: center;
     }
+
     .foot-logo {
         margin: 2em 2em;
         align-self: center;
     }
-    .foot-list{
+
+    .foot-list {
         margin: 1em 0 2em 0;
     }
 }
@@ -584,19 +607,24 @@ footer {
         width: 180px;
         height: 36px;
     }
+
     .nav-bar {
         padding: 1.5rem 2rem;
     }
+
     .searchbar-keyword {
         width: 300px;
     }
+
     .index-text h1 {
         max-width: 450px;
         min-width: 450px;
     }
+
     .index-buttons {
         flex-direction: column;
     }
+
     .pricing ul {
         width: 20rem;
     }
@@ -608,49 +636,60 @@ footer {
         max-width: 270px;
         min-width: 270px;
     }
+
     .foot-list {
         flex-direction: column;
     }
+
     .searchbar-keyword {
         width: 270px;
     }
+
     .searchbar-mobile-button {
         display: flex;
         flex-direction: column;
         height: 80px;
-    }   
+    }
+
     .searchbar-keyword-filter {
         padding-left: 0.5rem;
     }
+
     .searchbar-keyword input {
         padding-left: 0.5rem;
         width: 240px;
-    } 
+    }
+
     .searchbar-button {
         margin-top: 0.3rem;
     }
+
     .pricing ul {
-        height: 29rem;
+        height: 30rem;
+        width: 19rem;
     }
-    .pricing ul {
-        width: 16rem;
-    }
+
     .pricing-title {
         font-size: 1.8rem;
     }
+
     .pricing-list-check {
         font-size: 1.2rem;
     }
+
     .pricing-list-check span {
         font-size: 1.4rem;
     }
+
     .pricing-list-close {
         font-size: 1.2rem;
     }
+
     .pricing-list-close span {
         font-size: 1.4rem;
     }
-    .pricing-button{
+
+    .pricing-button {
         margin-top: 2rem;
     }
 }

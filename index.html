@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="assets/js/script.js"></script>
     <title>JobDeals - Onde talentos e oportunidades se encontram.</title>
 </head>
+
 <body>
     <header>
         <nav class="nav-bar">
@@ -24,27 +27,31 @@
             </div>
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>                    
-                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="pricing.html" class="nav-link">Preços</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">A JobDeals</a></li>
                 </ul>
             </div>
             <div class="start-button">
-                <button><a href="signup.html">Começar aqui</a></button>
+                <a href="signup.html"><button>Começar aqui</button></a>
             </div>
             <div class="mobile-menu-icon">
-                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white.svg" alt="botão para abrir o menu"></button>
+                <button onclick="menuShow()"><img class="icon" src="assets/img/menu_white.svg"
+                        alt="botão para abrir o menu"></button>
             </div>
         </nav>
         <div class="mobile-menu">
             <ul>
                 <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="pricing.html" class="nav-link">Preços</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">A JobDeals</a></li>
             </ul>
             <div class="start-button">
-                <button><a href="signup.html">Começar aqui</a></button>
+                <a href="signup.html"><button>Começar aqui</button></a>
             </div>
         </div>
     </header>
+
     <form action="">
         <div class="searchbar">
             <div class="searchbar-keyword">
@@ -67,7 +74,7 @@
                 </div>
             </div>
             <div class="divider">
-                
+
             </div>
             <div class="searchbar-mobile-button">
                 <div class="searchbar-radio">
@@ -85,6 +92,7 @@
             </div>
         </div>
     </form>
+
     <div class="container">
         <div class="index-text">
             <h1>
@@ -95,10 +103,10 @@
             </p>
             <div class="index-buttons">
                 <div class="login-button">
-                    <button><a href="login.html">Login</a></button>
+                    <a href="login.html"><button>Login</button></a>
                 </div>
                 <div class="singup-button">
-                    <button><a href="signup.html">Cadastre-se</a></button>
+                    <a href="signup.html"><button>Cadastre-se</button></a>
                 </div>
             </div>
         </div>
@@ -106,41 +114,75 @@
             <img src="assets/img/img-index.svg" alt="homem com uma lupa procurando canditatos.">
         </div>
     </div>
-    <div class="pricing">
-        <ul>
-            <li class="pricing-title">Plano Free</li>
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>
-            <li class="pricing-list-close"><span class="material-symbols-outlined">close</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-close"><span class="material-symbols-outlined">close</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-close"><span class="material-symbols-outlined">close</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-close"><span class="material-symbols-outlined">close</span>Lorem ipsum dolor</li>     
-            <div class="pricing-button">
-                <button><a href="pricing.html">Ver Mais</a></button>
+
+    <section class="pricing">
+        <div class="card">
+            <div class="card-title">
+                <h2>Basic</h2>
             </div>
-        </ul>
-        <ul>
-            <li class="pricing-title">Plano Essential</li>
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-close"><span class="material-symbols-outlined">close</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-close"><span class="material-symbols-outlined">close</span>Lorem ipsum dolor</li>     
-            <div class="pricing-button">
-                <button><a href="pricing.html">Ver Mais</a></button>
+            <div class="card-content">
+                <ul>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Destaque-se e entre em contato com recrutadores</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Ultrapasse os candidatos não pagantes da vaga</li>
+                    <li class="pricing-list-close"><span class="material-symbols-outlined">close</span><i
+                            class="fa fa-check-circle"></i> Identifique as vagas mais compatíveis com seu perfil</li>
+                    <li class="pricing-list-close"><span class="material-symbols-outlined">close</span><i
+                            class="fa fa-times-circle"></i> Suporte prioritário para qualquer questão</li>
+                    <li class="pricing-list-close"><span class="material-symbols-outlined">close</span><i
+                            class="fa fa-times-circle"></i> Seu CV é enviado automaticamente para as vagas mais
+                        compatíveis</li>
+                </ul>
+                <a href="pricing.html"><button>Adquirir</button></a>
             </div>
-        </ul>
-        <ul>
-            <li class="pricing-title">Plano Premium</li>
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>     
-            <li class="pricing-list-check"><span class="material-symbols-outlined">check</span>Lorem ipsum dolor</li>     
-            <div class="pricing-button">
-                <button><a href="pricing.html">Ver Mais</a></button>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <h2>Standard</h2>
             </div>
-        </ul>
-    </div>
+            <div class="card-content">
+                <ul>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Destaque-se e entre em contato com recrutadores</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Ultrapasse os candidatos não pagantes da vaga</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Identifique as vagas mais compatíveis com seu perfil</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-times-circle"></i> Suporte prioritário para qualquer questão</li>
+                    <li class="pricing-list-close"><span class="material-symbols-outlined">close</span><i
+                            class="fa fa-times-circle"></i> Seu CV é enviado automaticamente para as vagas mais
+                        compatíveis</li>
+                </ul>
+                <a href="pricing.html"><button>Adquirir</button></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">
+                <h2>Premium</h2>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Destaque-se e entre em contato com recrutadores</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Ultrapasse os candidatos não pagantes da vaga</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-check-circle"></i> Identifique as vagas mais compatíveis com seu perfil</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-times-circle"></i> Suporte prioritário para qualquer questão</li>
+                    <li class="pricing-list-check"><span class="material-symbols-outlined">check</span><i
+                            class="fa fa-times-circle"></i> Seu CV é enviado automaticamente para as vagas mais
+                        compatíveis</li>
+                </ul>
+                <a href="pricing.html"><button>Adquirir</button></a>
+            </div>
+        </div>
+    </section>
+    
     <footer>
         <div class="foot-bar">
             <div class="foot-logo">
@@ -151,19 +193,19 @@
             <div class="foot-list">
                 <ul>
                     <li class="foot-titles">Sobre</li>
-                    <li class="foot-item"><a href="#" class="foot-link">A JobDeals</a></li>
-                    <li class="foot-item"><a href="#" class="foot-link">Direitos autorais</a></li>
-                    <li class="foot-item"><a href="#" class="foot-link">Políticas de privacidade</a></li>
-                    <li class="foot-item"><a href="#" class="foot-link">Termos de uso</a></li>
+                    <li class="foot-item"><a href="about.html" class="foot-link">A JobDeals</a></li>
+                    <li class="foot-item"><a href="copyright.html" class="foot-link">Direitos autorais</a></li>
+                    <li class="foot-item"><a href="privacy-policy.html" class="foot-link">Políticas de privacidade</a></li>
+                    <li class="foot-item"><a href="terms-of-use.html" class="foot-link">Termos de uso</a></li>
                 </ul>
                 <ul>
                     <li class="foot-titles">Dúvidas</li>
-                    <li class="foot-item"><a href="#" class="foot-link">Contatos</a></li>
-                    <li class="foot-item"><a href="#" class="foot-link">Central de ajuda</a></li>
+                    <li class="foot-item"><a href="contact-us.html" class="foot-link">Fale Conosco</a></li>
+                    <li class="foot-item"><a href="help-center.html" class="foot-link">Central de ajuda</a></li>
                 </ul>
             </div>
         </div>
     </footer>
 </body>
-</html>
 
+</html>

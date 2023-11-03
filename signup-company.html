@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,15 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16x16.png">
     <link rel="stylesheet" href="assets/css/style-signup-company.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="assets/js/validate.js" defer></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Cadastro | Jobdeals</title>
 </head>
+
 <body>
     <div class="background-radiant">
-        <div class="container">
-            <div class="container2">
+        <main class="container">
+            <section class="company-text">
                 <div class="logo">
                     <a href="index.html">
                         <picture>
@@ -29,38 +31,50 @@
                     </h1>
                 </div>
                 <div class="index">
-                    <a href="login.html"><span class="material-symbols-outlined">arrow_back</span>VOLTAR PARA O LOGIN</a>
+                    <a href="login.html"><span class="material-symbols-outlined">arrow_back</span>IR PARA O LOGIN</a>
                 </div>
-            </div>
-            <div class="form">
-                <form action="javascript:alert('formulário aprovado para envio')" method="post">
+            </section>
+            <section class="form">
+                <form id="form-api">
                     <div class="form-header">
                         <div class="signup-button">
                             <button><a href="signup.html">Candidato</a></button>
                         </div>
                         <div class="signup-button-company">
-                            <button><a href="#">Empresa</a></button>
+                            <button><a href="signup-company.html">Empresa</a></button>
                         </div>
                     </div>
+
                     <div class="input-group">
                         <div class="input-box">
-                            <input id="cnpj" type="text" name="cnpj" placeholder="CNPJ" minlength="18" maxlength="18" onkeyup="maskCNPJ('##.###.###/####-##', this)" required>
+                            <input id="cnpj" type="text" name="cnpj" placeholder="CNPJ" oninput="applyCnpjMask(this)" maxlength="18">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <i class="fas fa-check-circle"></i>
+                            <small></small>
                         </div>
                         <div class="input-box">
-                            <input id="firstname" type="text" name="firstname" placeholder="Nome da sua empresa" required>
+                            <input id="name" type="text" name="name" placeholder="Nome da sua empresa">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <i class="fas fa-check-circle"></i>
+                            <small></small>
                         </div>
                         <div class="input-box">
-                            <input id="email" type="email" name="email" placeholder="E-mail" required>
+                            <input id="email" type="email" name="email" placeholder="E-mail">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <i class="fas fa-check-circle"></i>
+                            <small></small>
                         </div>
                     </div>
                     <div class="continue-button">
                         <div class="signup">
-                            <button type="submit"><a href="#">CADASTRAR</a></button>
+                           <a href="analysis.html"><button type="submit">CADASTRAR</button></a>
                         </div>
                     </div>
                 </form>
-            </div>
-        </div>
+                <script src="assets/js/validateCompany.js"></script>
+            </section>
+        </main>
     </div>
+    <script src="https://kit.fontawesome.com/089ae6f9d6.js" crossorigin="anonymous"></script>
 </body>
 </html>
