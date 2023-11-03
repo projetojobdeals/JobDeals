@@ -39,7 +39,7 @@ body {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
 
-.container2{
+.signup-text{
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -78,7 +78,7 @@ body {
     color: #EBEDF2;
     align-items: center;
 }
-form-he
+
 .index a img{
     width: 2rem;
     color: #EBEDF2;
@@ -131,7 +131,7 @@ form-he
     background-color: #352d6e;
 }
 
-.signup-button button a,
+.signup-button a button,
 .signup-button-company button a{
     text-decoration: none;
     color: #EBEDF2;
@@ -146,17 +146,32 @@ form-he
 .input-box{
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem;
+    margin-bottom: 22px;
+    position: relative;
 }
 
 .input-box input {
     width: 385px;
     height: 50px;
     padding: 0.8rem 1.2rem;
-    border: none;
+    border: transparent;
     border-radius: 10px;
     background-color: #181818;
     color: #EBEDF2;
+}
+
+.input-box i {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-box small{
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
+    visibility: hidden;
 }
 
 .input-box input:focus-visible{
@@ -174,6 +189,41 @@ form-he
 .input-box input#lastname{
     width: 220px;
 }
+
+/* Error and Success */
+
+.input-box.success input{
+    outline: transparent;
+    border: solid 2px;
+    border-color: #40B038;
+}
+
+.input-box.error input{
+    outline: transparent;
+    border: solid 2px;
+    border-color: #ac1a1a;
+}
+
+.input-box.success i.fa-check-circle{
+    color: #40B038;
+    visibility: visible;
+}
+
+.input-box.error i.fa-exclamation-circle{
+    color: #ac1a1a;
+    visibility: visible;    
+}
+
+.input-box.success small{
+    color: #40B038;
+}
+
+.input-box.error small{
+    color: #ac1a1a;
+    visibility: visible;    
+}
+
+/* ------------------------------ */
 
 .continue-button{
     display: flex;
@@ -193,39 +243,15 @@ form-he
 
 .signup button{
     background-color: #584AB0;
-}
-
-.signup button:hover{
-    background-color: #7765F0;
-    transition: .2s;
-}
-
-.signup button a{
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 800;
     color: #EBEDF2;
 }
 
-.signup-google button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EBEDF2;
-    
-}
-
-.signup-google button a{
-    display: flex;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.76);
-}
-
-.signup-google button a img{
-    padding-right: 1rem;
+.signup button:hover{
+    background-color: #7765F0;
+    transition: .2s;
 }
 
 @media (max-width: 1250px) {   
@@ -248,7 +274,7 @@ form-he
         align-items: center;
     }
 
-    .container2{
+    .signup-text{
         justify-content: center;
         align-items: center;
         padding: 0 0 1rem 0;
@@ -278,7 +304,7 @@ form-he
 }
 
 @media (max-width: 480px) {
-    .container2{
+    .signup-text{
         padding-top: 2rem;
     }
 
@@ -287,7 +313,7 @@ form-he
         height: 600px;
     }
 
-    .input-box input {
+    .input-box input, .input-box input#firstname, .input-box input#lastname {
         width: 336px;
         height: 50px;
     }
@@ -299,7 +325,7 @@ form-he
 }
 
 @media (max-width: 400px){
-    .container2{
+    .signup-text{
         padding-top: 0;
     }
 

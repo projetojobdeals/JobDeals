@@ -21,7 +21,7 @@ body {
     background-position: center center;
 }
 
-.background-radiant{
+.background-radiant {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -30,28 +30,28 @@ body {
     background: radial-gradient(97.93% 144.94% at 3.19% 11.52%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.035) 100%)
 }
 
-.container{
+.container {
     width: 1200px;
     height: 700px;
     display: flex;
-    background: radial-gradient(99.68% 185.51% at 2.42% 4.03%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), #584AB0;;
+    background: radial-gradient(99.68% 185.51% at 2.42% 4.03%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), #584AB0;
     border-radius: 30px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
 }
 
-.container2{
+.company-text {
     width: 50%;
     display: flex;
     flex-direction: column;
     padding: 2rem;
 }
 
-.logo{
+.logo {
     display: flex;
     margin: 1.5rem;
 }
 
-.form-text{
+.form-text {
     display: flex;
     font-weight: 600;
     font-size: 1.2rem;
@@ -63,14 +63,13 @@ body {
     color: #EBEDF2;
 }
 
-
-.index{
+.index {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.index a{
+.index a {
     display: flex;
     text-decoration: none;
     font-size: 1.1rem;
@@ -79,17 +78,12 @@ body {
     align-items: center;
 }
 
-.index a img{
-    width: 2rem;
-    color: #EBEDF2;
-}
-
-.index a:hover{
+.index a:hover {
     color: #7765F0;
     transition: .2s;
 }
 
-.form{
+.form {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -98,7 +92,7 @@ body {
     padding: 1rem;
 }
 
-.form form{
+.form form {
     width: 450px;
     height: 600px;
     background-color: #1d1d1d;
@@ -111,11 +105,11 @@ body {
     padding: 2rem;
 }
 
-.form-header{
+.form-header {
     display: flex;
 }
 
-.signup-button button{
+.signup-button button {
     width: 100px;
     height: 30px;
     border: none;
@@ -123,7 +117,7 @@ body {
     background-color: #352d6e;
 }
 
-.signup-button-company button{
+.signup-button-company button {
     width: 100px;
     height: 30px;
     border: none;
@@ -131,22 +125,23 @@ body {
     background-color: #584AB0;
 }
 
-.signup-button button a,
-.signup-button-company button a{
+.signup-button button a ,
+.signup-button-company button a {
     text-decoration: none;
     color: #EBEDF2;
 }
 
-.input-group{
+.input-group {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
-.input-box{
+.input-box {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.1rem;
+    margin-bottom: 22px;
+    position: relative;
 }
 
 .input-box input {
@@ -159,23 +154,71 @@ body {
     color: #EBEDF2;
 }
 
-.input-box input:focus-visible{
+.input-box i {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-box small {
+    position: absolute;
+    bottom: -15px;
+    left: 10px;
+    visibility: hidden;
+}
+
+.input-box input:focus-visible {
     outline: 2px solid #584AB0;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder {
     color: #EBEDF2;
 }
 
+/* Error and Success */
 
-.continue-button{
+.input-box.success input {
+    outline: transparent;
+    border: solid 2px;
+    border-color: #40B038;
+}
+
+.input-box.error input {
+    outline: transparent;
+    border: solid 2px;
+    border-color: #ac1a1a;
+}
+
+.input-box.success i.fa-check-circle {
+    color: #40B038;
+    visibility: visible;
+}
+
+.input-box.error i.fa-exclamation-circle {
+    color: #ac1a1a;
+    visibility: visible;
+}
+
+.input-box.success small {
+    color: #40B038;
+}
+
+.input-box.error small {
+    color: #ac1a1a;
+    visibility: visible;
+}
+
+/* ------------------------------ */
+
+.continue-button {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.continue-button button{
+.continue-button button {
     width: 376px;
     height: 50px;
     margin: 0.3rem;
@@ -184,88 +227,62 @@ body {
     cursor: pointer;
 }
 
-.signup button{
+.signup button {
     background-color: #584AB0;
-}
-
-.signup button:hover{
-    background-color: #7765F0;
-    transition: .2s;
-}
-
-.signup button a{
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 800;
     color: #EBEDF2;
 }
 
-.signup-google button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #EBEDF2;
-    
+.signup button:hover {
+    background-color: #7765F0;
+    transition: .2s;
 }
 
-.signup-google button a{
-    display: flex;
-    text-align: center;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: rgba(0, 0, 0, 0.76);
-}
-
-.signup-google button a img{
-    padding-right: 1rem;
-}
-
-
-
-@media (max-width: 1250px) {   
-    .container{
+@media (max-width: 1250px) {
+    .container {
         width: 1000px;
-        height: 583,33px;
+        height: 583, 33px;
     }
 
-    .form-text{
+    .form-text {
         margin: 4rem 1rem;
     }
 }
 
 @media (max-width: 1020px) {
-    .container{
+    .container {
         width: 600px;
         height: 800px;
         flex-direction: column;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
     }
 
-    .container2{
+    .company-text {
         justify-content: center;
         align-items: center;
         padding: 0 0 1rem 0;
     }
 
-    .logo{
+    .logo {
         margin: 0;
         align-items: center;
         padding-bottom: 1em;
     }
 
-    .form-text{
+    .form-text {
         display: none;
     }
 
-    .form{
+    .form {
         padding: 0;
     }
 }
 
 @media (max-width: 630px) {
-    .container{
+    .container {
         width: 100vw;
         height: 55rem;
         border-radius: 0;
@@ -273,11 +290,11 @@ body {
 }
 
 @media (max-width: 480px) {
-    .container2{
+    .company-text {
         padding-top: 2rem;
     }
 
-    .form form{
+    .form form {
         width: 400px;
         height: 600px;
     }
@@ -287,46 +304,43 @@ body {
         height: 50px;
     }
 
-    .continue-button button{
+    .continue-button button {
         width: 336px;
         height: 50px;
     }
 }
 
-@media (max-width: 400px){
-    .container2{
+@media (max-width: 400px) {
+    .company-text {
         padding-top: 0;
     }
 
-    .form form{
+    .form form {
         width: 300px;
         height: 500px;
         align-items: center;
     }
-    
-    .signup-button{
+
+    .signup-button {
         padding-bottom: 1.5rem;
     }
 
-    .input-box input#firstname{
+    .input-box input#name {
         width: 216px;
     }
-    
-    .input-box input#lastname{
-        width: 216px;
-    }
+
 
     .input-box input {
         width: 216px;
     }
 
-    .input-group{
+    .input-group {
         align-items: center;
         flex-wrap: nowrap;
         flex-direction: column;
     }
 
-    .continue-button button{
+    .continue-button button {
         width: 216px;
     }
 }
