@@ -4,12 +4,16 @@ const lastname = document.getElementById('lastname');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const confirmpassword = document.getElementById('confirmpassword');
+const url = "https://localhost:7197/api/User";
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();    
 
-    checkInputs();
-})
+    const validationResult = checkInputs(); // Recebe o resultado da função checkInputs
+    if (validationResult.isValid) {
+        setInputs(validationResult); // Passa o resultado da validação para setInputs
+    }
+});
 
 function checkInputs(){
     const firstnameValue = firstname.value;
@@ -63,9 +67,13 @@ function checkInputs(){
         return (formControl.className === "input-box success");
     });
 
-    if (formIsValid) {
-        console.log("O formulário está 100% válido.")
-    }
+    return {
+        isValid: formIsValid,
+        firstnameValue: firstnameValue,
+        lastnameValue: lastnameValue,
+        emailValue: emailValue,
+        passwordValue: passwordValue,
+    };
 }
 
 function setErrorFor(input, message){
@@ -92,3 +100,34 @@ function checkEmail(email) {
     );
 }
 
+function setInputs(validationResult){
+
+    const {
+        firstnameValue,
+        lastnameValue,
+        emailValue,
+        passwordValue,
+    } = validationResult;
+
+    const userData = {
+        "firstName": firstnameValue,
+        "lastName": lastnameValue,
+        "email": emailValue,
+        "password": passwordValue,
+    };
+
+    function addNewUser() {
+        axios.post(url, userData)
+            .then(response => {
+                alert("Usuário Salvo")
+                redirect();
+            })
+            .catch(error => console.log(error))
+    }
+
+    addNewUser()
+}
+
+function redirect() {
+    window.location.href = '/profile.html';
+}

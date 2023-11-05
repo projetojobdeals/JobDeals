@@ -2,11 +2,16 @@ const form = document.getElementById('form-api')
 const name = document.getElementById('name');
 const email = document.getElementById('email');
 const cnpj = document.getElementById('cnpj');
+const url = "https://localhost:7197/api/User";
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();    
 
-    checkInputs();
+    const validationResult = checkInputs(); // Recebe o resultado da função checkInputs
+    console.log(validationResult)
+    if (validationResult.isValid) {
+        setInputs(validationResult); // Passa o resultado da validação para setInputs
+    }
 })
 
 function checkInputs(){
@@ -42,9 +47,12 @@ function checkInputs(){
         return (formControl.className === "input-box success");
     });
 
-    if (formIsValid) {
-        console.log("O formulário está 100% válido.")
-    }
+    return {
+        isValid: formIsValid,
+        nameValue: nameValue,
+        emailValue: emailValue,
+        cnpjValue: cnpjValue,
+    };
 }
 
 function setErrorFor(input, message){
@@ -134,4 +142,34 @@ function checkCNPJ(cnpj) {
           return false;
 
     return true;
+}
+
+function setInputs(validationResult){
+
+    const {
+        nameValue,
+        emailValue,
+        cnpjValue,
+    } = validationResult;
+
+    const userData = {
+        "name": nameValue,
+        "email": emailValue,
+        "cnpj": cnpjValue
+    };
+
+    function addNewUser() {
+        axios.post(url, userData)
+            .then(response => {
+                alert("Usuário Salvo")
+                redirect();
+            })
+            .catch(error => console.log(error))
+    }
+
+    addNewUser()
+}
+
+function redirect() {
+    window.location.href = '/profile.html';
 }
