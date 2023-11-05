@@ -12,7 +12,7 @@ function getUser() {
 getUser()
 
 function getOneUser() {
-    axios.get(`${url}/14`)
+    axios.get(`${url}/1`)
         .then(response => {
             const data = response.data;
             username = data.firstName + " " + data.lastName;
