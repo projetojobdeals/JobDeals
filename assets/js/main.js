@@ -9,7 +9,7 @@ function getUser() {
         .catch(error => console.log(error))
 }
 
-getUser()
+//getUser()
 
 function getOneUser() {
     axios.get(`${url}/1`)
@@ -21,7 +21,7 @@ function getOneUser() {
         .catch(error => console.log(error))
 }
 
-getOneUser()
+//getOneUser()
 
 function updateUser() {
     axios.put(`${url}/13`, userData)
