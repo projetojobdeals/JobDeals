@@ -30,7 +30,7 @@ function loginUser(userData) {
             if (error.response && error.response.data && error.response.data.message) {
                 alert(error.response.data.message);
             } else {
-                alert("Erro desconhecido");
+                alert("Primeiro você precisa efetuar o login.");
             }
         });
 }  
@@ -45,14 +45,7 @@ function makeAuthorizedRequest() {
         .then(response => {
             window.location.href = "profile.html";
         })
-        .catch(error => {
-            if (error.response && error.response.status === 401) {
-                window.location.href = "login.html";
-            } else {
-                console.log(error)
-            }
-        });
-    } else {
-        alert("Você precisa fazer login primeiro.");
-    }
+        .catch(error => console.log(error))
+            
+        }
 }

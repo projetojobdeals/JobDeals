@@ -119,15 +119,22 @@ function setInputs(validationResult){
     function addNewUser() {
         axios.post(url, userData)
             .then(response => {
-                alert("Usuário Salvo")
+                alert("Usuário Cadastrado")
                 redirect();
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                if (error.response && error.response.status >= 400) {
+                    // Verifica se a resposta é um erro (status 4xx ou 5xx)
+                    alert("O email já está cadastrado.");
+                } else {
+                    alert("Erro ao criar o cadastro.");
+                }
+            });
     }
 
     addNewUser()
 }
 
 function redirect() {
-    window.location.href = '/profile.html';
+    window.location.href = '/login.html';
 }
