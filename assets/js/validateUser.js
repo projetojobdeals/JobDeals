@@ -136,5 +136,5 @@ function setInputs(validationResult){
 }
 
 function redirect() {
-    window.location.href = '/login.html';
+    window.location.href = 'login.html';
 }
