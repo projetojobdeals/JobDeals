@@ -171,5 +171,5 @@ function setInputs(validationResult){
 }
 
 function redirect() {
-    window.location.href = '/profile.html';
+    window.location.href = 'analysis.html';
 }
